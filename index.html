@@ -15,10 +15,10 @@
             --dark: #2c3e50;
             --success: #27ae60;
             --warning: #f39c12;
-          
-}
-
-        
+            --text: #333333;
+            --bg-light: #f9f9f9;
+            --card-bg: #ffffff;
+        }
         
         * {
             margin: 0;
@@ -28,22 +28,23 @@
         
         body {
             font-family: 'Poppins', sans-serif;
-            color: #333;
+            color: var(--text);
             line-height: 1.6;
+            background-color: var(--bg-light);
             overflow-x: hidden;
-            background-color: #f9f9f9;
         }
         
         h1, h2, h3, h4 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
+            color: var(--primary);
         }
         
         .container {
-            width: 90%;
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 20px;
         }
         
         /* Header Styles */
@@ -83,11 +84,13 @@
         .logo-text h1 {
             font-size: 1.5rem;
             margin-bottom: 5px;
+            color: white;
         }
         
         .logo-text p {
             font-size: 0.8rem;
             opacity: 0.8;
+            color: white;
         }
         
         nav ul {
@@ -148,12 +151,15 @@
             max-width: 800px;
             margin: 0 auto;
             animation: fadeInUp 1s ease;
+            padding: 0 20px;
         }
         
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
             text-transform: uppercase;
+            line-height: 1.2;
+            color: white;
         }
         
         .hero p {
@@ -165,12 +171,13 @@
         .date-badge {
             background: var(--accent);
             color: white;
-            padding: 0.5rem 1.5rem;
+            padding: 0.8rem 2rem;
             border-radius: 50px;
             display: inline-block;
             font-weight: 600;
             margin-bottom: 2rem;
             animation: pulse 2s infinite;
+            font-size: 1.1rem;
         }
         
         .btn {
@@ -185,6 +192,7 @@
             border: none;
             cursor: pointer;
             margin: 0.5rem;
+            font-size: 1rem;
         }
         
         .btn:hover {
@@ -203,961 +211,522 @@
             color: var(--primary);
         }
         
-       /* Updated About Section */
-.section {
-    padding: 5rem 0;
-    background: #f8f9fb;
-}
-
-.about-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 2rem;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
-}
-
-.section-title h2 {
-    font-size: 2.8rem;
-    color: #1abc9c;
-    font-weight: 700;
-    position: relative;
-    display: inline-block;
-}
-
-.section-title h2:after {
-    content: '';
-    position: absolute;
-    width: 80px;
-    height: 4px;
-    background: #34495e;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 2px;
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3rem;
-    flex-wrap: wrap;
-}
-
-.about-text {
-    flex: 1 1 500px;
-    animation: fadeInLeft 1.5s ease forwards;
-    opacity: 0;
-}
-
-.about-text h3 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #2c3e50;
-    font-weight: 600;
-}
-
-.about-text p {
-    margin-bottom: 1.5rem;
-    font-size: 1.05rem;
-    color: #444;
-    line-height: 1.7;
-}
-
-.about-images {
-    flex: 1 1 400px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    animation: fadeInRight 1.5s ease forwards;
-    opacity: 0;
-}
-
-.about-img {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s ease;
-    height: 220px;
-}
-
-.about-img:hover {
-    transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
-}
-
-.about-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Animations */
-@keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.fade-in-left {
-    animation: fadeInLeft 1.3s ease-out forwards;
-    opacity: 0;
-}
-
-.fade-in-right {
-    animation: fadeInRight 1.3s ease-out forwards;
-    opacity: 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-    }
-    .about-images {
-        grid-template-columns: 1fr;
-    }
-}
-
+        /* Section Styling */
+        .section {
+            padding: 5rem 0;
+        }
         
-        /* Themes Section - Animated Floating Cards */
-.themes {
-  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
-  padding: 50px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.theme-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2.5rem;
-  max-width: 1100px;
-  width: 100%;
-}
-
-/* Floating animation keyframes */
-@keyframes floatUpDown {
-  0%, 100% {
-    transform: translateY(0);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
-  }
-  50% {
-    transform: translateY(-15px);
-    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.12);
-  }
-}
-
-.theme-card {
-  background: #fff;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  animation: floatUpDown 4s ease-in-out infinite;
-  cursor: pointer;
-  will-change: transform;
-  position: relative;
-}
-
-.theme-card:hover {
-  box-shadow: 0 35px 50px rgba(0, 150, 255, 0.3);
-  transform: translateY(-20px) scale(1.05);
-  animation-play-state: paused; /* Pause floating animation on hover */
-  z-index: 10;
-}
-
-.theme-img {
-  height: 200px;
-  overflow: hidden;
-  position: relative;
-}
-
-.theme-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-  will-change: transform;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-
-.theme-card:hover .theme-img img {
-  transform: scale(1.12) rotate(2deg);
-}
-
-.theme-content {
-  padding: 1.8rem 1.5rem;
-  text-align: center;
-}
-
-.theme-content h3 {
-  color: #0077ff;
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin-bottom: 0.7rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  user-select: none;
-}
-
-/* Optional: subtle shine effect on hover */
-.theme-card:hover::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.4) 50%,
-    rgba(255, 255, 255, 0.1) 100%
-  );
-  transform: rotate(25deg);
-  animation: shine 1.5s ease forwards;
-  pointer-events: none;
-  border-radius: 15px;
-  opacity: 0;
-}
-
-.theme-card:hover::before {
-  opacity: 1;
-}
-
-@keyframes shine {
-  0% {
-    transform: translateX(-100%) rotate(25deg);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateX(100%) rotate(25deg);
-    opacity: 0;
-  }
-}
-
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 1 1 500px;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            color: var(--text);
+            line-height: 1.7;
+        }
+        
+        .about-images {
+            flex: 1 1 500px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        
+        .about-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            height: 220px;
+        }
+        
+        .about-img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Themes Section */
+        .themes {
+            background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+        }
+        
+        .theme-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .theme-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .theme-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .theme-img {
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .theme-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .theme-card:hover .theme-img img {
+            transform: scale(1.1);
+        }
+        
+        .theme-content {
+            padding: 1.5rem;
+        }
+        
+        .theme-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary);
+        }
+        
+        .theme-content p {
+            color: var(--text);
+            font-size: 0.95rem;
+        }
         
         /* Speakers Section */
-.speakers {
-    background: url('https://images.unsplash.com/photo-1517502884422-41eaead166d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') 
-        no-repeat center center/cover;
-    background-attachment: fixed;
-    position: relative;
-    color: white;
-}
-
-/* Overlay for dark background effect */
-.speakers::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(44, 62, 80, 0.9);
-}
-
-/* Positioning content above the overlay */
-.speakers .container {
-    position: relative;
-    z-index: 1;
-}
-
-/* Section title styling */
-.speakers .section-title h2 {
-    color: white;
-}
-
-/* Responsive grid for speaker cards */
-.speaker-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-/* Individual speaker card */
-.speaker-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
-}
-
-/* Hover effect on speaker card */
-.speaker-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-    background: rgba(255, 255, 255, 0.15);
-}
-
-/* Speaker image container */
-.speaker-img {
-    height: 300px;
-    overflow: hidden;
-}
-
-/* Speaker image styling */
-.speaker-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Speaker info container */
-.speaker-info {
-    padding: 1.5rem;
-    text-align: center;
-}
-
-/* Speaker name */
-.speaker-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-/* Speaker position */
-.speaker-info p.position {
-    color: var(--secondary);
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-/* Social icons container */
-.speaker-social {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-/* Social icon links */
-.speaker-social a {
-    color: white;
-    background: rgba(255, 255, 255, 0.2);
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-/* Social icon hover effect */
-.speaker-social a:hover {
-    background: var(--secondary);
-    transform: translateY(-3px);
-}
-
-     #committee {
-  background: White
-  padding: 60px 20px;
-  font-family: 'Poppins', sans-serif;
-  color: #eee;
-}
-
-#committee .section-title {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-#committee .section-title h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #00ffd5;
-  text-transform: uppercase;
-  animation: glow 2.5s ease-in-out infinite alternate;
-}
-
-/* Glow animation for the title */
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #00ffd5, 0 0 20px #00ffd5;
-  }
-  to {
-    text-shadow: 0 0 30px #00ffd5, 0 0 40px #00ffd5, 0 0 50px #00ffd5;
-  }
-}
-
-.committee-members {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.member-card {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  border-radius: 15px;
-  width: 280px;
-  padding: 30px 25px;
-  box-shadow: 0 0 15px rgba(0, 255, 213, 0.3);
-  cursor: default;
-  transform-style: preserve-3d;
-  transition: transform 0.3s ease, box-shadow 0.4s ease;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease forwards;
-  animation-delay: calc(var(--i) * 0.15s);
-  text-align: center;
-}
-
-.member-card:hover {
-  transform: scale(1.05) translateZ(20px);
-  box-shadow: 0 0 30px #00ffd5, 0 0 40px #00ffd5;
-}
-
-.member-info h3 {
-  font-size: 1.4rem;
-  margin-bottom: 12px;
-  color: #00ffd5;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-}
-
-.member-info p {
-  font-size: 1rem;
-  font-style: italic;
-  color: #c1f9f0;
-  margin: 0;
-  line-height: 1.4;
-}
-
-/* Fade in and slide up */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-       /* Awards Section Styles */
-.awards {
-  background: linear-gradient(135deg, #e0f7fa, #ffffff);
-  padding: 60px 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.section-title h2 {
-  text-align: center;
-  font-size: 2.8rem;
-  color: #00796b;
-  margin-bottom: 2.5rem;
-  letter-spacing: 2px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.awards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Floating animation */
-@keyframes floatUpDown {
-  0%, 100% {
-    transform: translateY(0);
-    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
-  }
-  50% {
-    transform: translateY(-15px);
-    box-shadow: 0 25px 35px rgba(0,0,0,0.1);
-  }
-}
-
-.award-card {
-  background: #ffffff;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 15px rgba(0,0,0,0.05);
-  transition: box-shadow 0.4s ease, transform 0.4s ease;
-  animation: floatUpDown 5s ease-in-out infinite;
-  position: relative;
-  cursor: pointer;
-  will-change: transform;
-}
-
-.award-card:hover {
-  box-shadow: 0 30px 50px rgba(0, 150, 136, 0.5);
-  transform: translateY(-25px) scale(1.05);
-  animation-play-state: paused;
-  z-index: 10;
-}
-
-/* Image styles */
-.award-img {
-  height: 180px;
-  overflow: hidden;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  position: relative;
-}
-
-.award-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-  will-change: transform;
-}
-
-.award-card:hover .award-img img {
-  transform: scale(1.1) rotate(2deg);
-}
-
-/* Content styling */
-.award-content {
-  padding: 1.6rem 1.5rem;
-  text-align: center;
-}
-
-.award-content h3 {
-  font-size: 1.4rem;
-  color: #004d40;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-}
-
-.award-content p {
-
-   /* Registration Section */
-.registration {
-  background: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
-  position: relative;
-  color: white;
-  padding: 100px 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow: hidden;
-}
-
-/* Dark overlay for contrast */
-.registration::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(15, 30, 50, 0.85);
-  z-index: 0;
-}
-
-/* Container must be above overlay */
-.registration .container {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-  margin: 0 auto;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.registration .container.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Section title with big glow */
-.registration .section-title h2 {
-  font-size: 3.8rem;
-  text-align: center;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-bottom: 2.5rem;
-  color: #00ffff;
-  text-shadow:
-    0 0 15px #00ffff,
-    0 0 40px #00ffff;
-  letter-spacing: 0.3em;
-}
-
-/* Pricing table with glass effect + glow */
-.pricing-table {
-  background: rgba(0, 255, 255, 0.1);
-  border-radius: 30px;
-  backdrop-filter: blur(18px);
-  box-shadow:
-    0 0 40px #00ffff,
-    inset 0 0 15px rgba(0, 255, 255, 0.2);
-  border: 2px solid #00ffff;
-  margin: 0 auto 3rem auto;
-  max-width: 900px;
-  overflow: hidden;
-  transition: box-shadow 0.4s ease;
-}
-
-.pricing-table:hover {
-  box-shadow:
-    0 0 70px #00ffff,
-    inset 0 0 25px rgba(0, 255, 255, 0.3);
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  color: #ccffff;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
-th, td {
-  padding: 1.6rem 2.2rem;
-  border-bottom: 1px solid rgba(0, 255, 255, 0.15);
-  transition: background-color 0.3s ease;
-}
-
-th {
-  background: rgba(0, 255, 255, 0.25);
-  font-size: 1.1rem;
-  color: #003333;
-  text-transform: uppercase;
-  text-shadow: 0 0 6px #004d4d;
-  border-bottom: 3px solid #00ffff;
-}
-
-tr:hover td {
-  background: rgba(0, 255, 255, 0.15);
-  cursor: pointer;
-  color: #e0ffff;
-}
-
-tr:last-child td {
-  border-bottom: none;
-}
-
-.highlight {
-  background: rgba(0, 255, 255, 0.4);
-  font-weight: 700;
-  color: #002222;
-  border-radius: 15px;
-  box-shadow: 0 0 20px #00ffff;
-}
-
-/* Glowing Button */
-.btn {
-  display: inline-block;
-  background: linear-gradient(45deg, #00ffff, #005555);
-  color: #000;
-  font-weight: 700;
-  padding: 18px 50px;
-  font-size: 1.3rem;
-  border-radius: 50px;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  box-shadow:
-    0 0 25px #00ffff,
-    0 6px 25px rgba(0, 255, 255, 0.6);
-  transition: all 0.3s ease;
-  text-decoration: none;
-  user-select: none;
-  margin: 0 auto;
-  display: block;
-  width: max-content;
-  text-align: center;
-}
-
-.btn:hover,
-.btn:focus {
-  background: linear-gradient(45deg, #005555, #00ffff);
-  box-shadow:
-    0 0 45px #00ffff,
-    0 9px 35px rgba(0, 255, 255, 0.9);
-  transform: scale(1.15);
-  outline: none;
-  cursor: pointer;
-}
-
-/* Responsive adjustments */
-@media (max-width: 650px) {
-  .registration .section-title h2 {
-    font-size: 2.8rem;
-  }
-
-  th, td {
-    padding: 1rem 1.3rem;
-    font-size: 1rem;
-  }
-
-  .btn {
-    padding: 14px 40px;
-    font-size: 1.1rem;
-  }
-}
-
-
-
-        
-     /* Call for Papers Styling */
-.call-for-papers {
-    background: #f9f9f9;
-    animation: fadeIn 1.5s ease-in;
-}
-
-.call-for-papers h3 {
-    font-size: 1.6rem;
-    color: var(--primary);
-    margin-bottom: 1rem;
-}
-
-.paper-guidelines ul {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 2rem;
-}
-
-.paper-guidelines ul li {
-    background: #fff;
-    padding: 0.75rem 1rem;
-    margin-bottom: 0.8rem;
-    border-left: 5px solid var(--secondary);
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-}
-
-.paper-guidelines ul li:hover {
-    transform: translateX(5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-}
-
-.paper-guidelines p {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    line-height: 1.6;
-}
-
-.deadlines {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.deadline-card {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-    text-align: center;
-    flex: 1 1 200px;
-    min-width: 200px;
-    max-width: 250px;
-}
-
-.deadline-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-}
-
-.deadline-card h4 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: var(--dark);
-}
-
-.deadline-card .date {
-    font-weight: bold;
-    color: var(--secondary);
-    font-size: 1rem;
-}
-
-.stylish-btn {
-    padding: 0.75rem 2rem;
-    background: linear-gradient(to right, var(--primary), var(--secondary));
-    color: #fff;
-    border-radius: 50px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background 0.3s ease, transform 0.2s ease;
-    text-decoration: none;
-}
-
-.stylish-btn:hover {
-    background: linear-gradient(to right, var(--secondary), var(--primary));
-    transform: scale(1.05);
-}
-
-/* Fade In Animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-  /* Past Events Section */
-.past-events-section {
-  padding: 60px 20px;
-  background: #111;
-  color: #eee;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #1abc9c;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-}
-
-/* Events Gallery Grid */
-.events-gallery {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.event-card {
-  flex: 1 1 280px;
-  max-width: 320px;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(26, 188, 156, 0.3);
-  background: #222;
-  cursor: pointer;
-  opacity: 0;
-  transform: scale(0.95);
-  transition: all 0.6s ease;
-}
-
-.event-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 15px;
-  transition: transform 0.4s ease;
-}
-
-/* Hover zoom effect */
-.event-card:hover img {
-  transform: scale(1.05);
-}
-
-/* Animate visible cards */
-.event-card.visible {
-  opacity: 1;
-  transform: scale(1);
-}
-/* Partners Section */
-#partners {
-    background: #ffffff;
-    padding: 5rem 0;
-}
-
-.partners-logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 3rem;
-    animation: fadeInUp 1.3s ease-out forwards;
-    opacity: 0;
-}
-
-.partner-logo {
-    flex: 0 1 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease;
-    padding: 1rem;
-    background: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-}
-
-.partner-logo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.partner-logo img {
-    max-width: 100%;
-    max-height: 100px;
-    object-fit: contain;
-}
-
-/* Animation */
-@keyframes fadeInUp {
-    0% {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .partners-logos {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .partner-logo {
-        width: 100%;
-        max-width: 250px;
-    }
-}
-/* Contact Section */
-        .contact {
-            background: var(--primary);
+        .speakers {
+            background: url('https://images.unsplash.com/photo-1517502884422-41eaead166d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            background-attachment: fixed;
+            position: relative;
             color: white;
         }
         
+        .speakers::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(44, 62, 80, 0.9);
+        }
+        
+        .speakers .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .speakers .section-title h2 {
+            color: white;
+        }
+        
+        .speaker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .speaker-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .speaker-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .speaker-img {
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .speaker-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .speaker-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .speaker-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        
+        .speaker-info p.position {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .speaker-info p {
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .speaker-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .speaker-social a {
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .speaker-social a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        /* Committee Section */
+        .committee-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .member-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .member-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .member-info p {
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+        
+        /* Awards Section */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .award-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .award-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .award-img {
+            height: 150px;
+            overflow: hidden;
+        }
+        
+        .award-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .award-card:hover .award-img img {
+            transform: scale(1.1);
+        }
+        
+        .award-content {
+            padding: 1.5rem;
+        }
+        
+        .award-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary);
+        }
+        
+        .award-content p {
+            color: var(--text);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Registration Section */
+        .registration {
+            background: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            position: relative;
+            color: white;
+        }
+        
+        .registration::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 30, 50, 0.85);
+        }
+        
+        .registration .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .registration .section-title h2 {
+            color: white;
+        }
+        
+        .pricing-table {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 2rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 1.2rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        th {
+            background: rgba(255, 255, 255, 0.2);
+            font-weight: 600;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .highlight {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        /* Call for Papers */
+        .paper-guidelines {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .paper-guidelines h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .paper-guidelines ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .paper-guidelines ul li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+        
+        .paper-guidelines ul li:last-child {
+            border-bottom: none;
+        }
+        
+        .deadlines {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .deadline-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .deadline-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .deadline-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .deadline-card .date {
+            font-weight: bold;
+            color: var(--secondary);
+            font-size: 1rem;
+        }
+        
+        /* Past Events */
+        .events-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .event-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .event-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Partners */
+        .partners-logos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 2rem;
+            align-items: center;
+            justify-items: center;
+        }
+        
+        .partner-logo {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            width: 100%;
+        }
+        
+        .partner-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .partner-logo img {
+            max-width: 100%;
+            max-height: 70px;
+            object-fit: contain;
+        }
+        
+        /* Contact Section */
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1179,14 +748,16 @@ tr:last-child td {
         .contact-icon {
             font-size: 1.5rem;
             color: var(--secondary);
+            margin-top: 0.3rem;
         }
         
         .contact-text h3 {
             margin-bottom: 0.3rem;
+            color: var(--primary);
         }
         
         .contact-text a {
-            color: white;
+            color: var(--text);
             text-decoration: none;
             transition: all 0.3s ease;
         }
@@ -1196,10 +767,10 @@ tr:last-child td {
         }
         
         .contact-form {
-            background: white;
+            background: var(--card-bg);
             border-radius: 10px;
             padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
         .contact-form h3 {
@@ -1248,6 +819,7 @@ tr:last-child td {
         .submit-btn:hover {
             background: #c0392b;
         }
+        
         /* Footer */
         footer {
             background: var(--dark);
@@ -1302,6 +874,7 @@ tr:last-child td {
             margin-bottom: 1.5rem;
             position: relative;
             padding-bottom: 10px;
+            color: white;
         }
         
         .footer-links h3:after {
@@ -1403,20 +976,12 @@ tr:last-child td {
         
         /* Responsive Styles */
         @media (max-width: 992px) {
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .about-text, .about-images {
-                width: 100%;
-            }
-            
-            .about-images {
-                margin-top: 2rem;
-            }
-            
             .hero h1 {
                 font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
             }
         }
         
@@ -1434,6 +999,7 @@ tr:last-child td {
                 background: var(--primary);
                 transition: all 0.3s ease;
                 z-index: 999;
+                padding: 2rem;
             }
             
             nav.active {
@@ -1442,7 +1008,6 @@ tr:last-child td {
             
             nav ul {
                 flex-direction: column;
-                padding: 2rem;
             }
             
             nav ul li {
@@ -1457,8 +1022,16 @@ tr:last-child td {
                 font-size: 1rem;
             }
             
-            .section-title h2 {
-                font-size: 2rem;
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-images {
+                grid-template-columns: 1fr;
             }
         }
         
@@ -1474,14 +1047,21 @@ tr:last-child td {
             .btn {
                 padding: 0.6rem 1.5rem;
                 font-size: 0.9rem;
-            }
-            
-            .section {
-                padding: 3rem 0;
+                display: block;
+                width: 100%;
+                margin: 0.5rem 0;
             }
             
             .section-title h2 {
                 font-size: 1.8rem;
+            }
+            
+            .deadlines {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -1491,7 +1071,6 @@ tr:last-child td {
     <header id="header">
         <div class="container header-container">
             <div class="logo">
-                
                 <div class="logo-text">
                     <h1>ICBAT 2025</h1>
                     <p>International Conference on Biological Sciences and Advanced Technologies</p>
@@ -1530,208 +1109,121 @@ tr:last-child td {
         </div>
     </section>
 
-   <!-- About Section -->
-<section class="section" id="about">
-    <div class="container about-container">
-        <div class="section-title">
-            <h2>About ICBAT 2025</h2>
-        </div>
-        <div class="about-content">
-            <div class="about-text fade-in-left">
-                <h3>International Conference on Biological Sciences and Advanced Technologies</h3>
-                <p>
-                    The <strong>International Conference on Biological Sciences and Advanced Technologies (ICBAT 2025)</strong> brings together visionary minds from academia and industry to explore the latest breakthroughs and innovations shaping the future of life sciences and technology.
-                </p>
-                <p>
-                    This interdisciplinary platform will delve into diverse topics such as <em>biotechnology, genomics, biomedical engineering, environmental sciences, nanotechnology, artificial intelligence, machine learning, and synthetic biology</em> — highlighting their impact on research, healthcare, and sustainability.
-                </p>
-                <p>
-                    As a <strong>Scopus-indexed</strong> event, ICBAT 2025 offers invaluable opportunities for networking, collaboration, and the exchange of pioneering ideas among global scientists, researchers, and professionals.
-                </p>
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About ICBAT 2025</h2>
+                <p>The premier international conference bringing together experts in biological sciences and advanced technologies</p>
             </div>
-           <div class="about-images fade-in-right">
-    <div class="about-img">
-        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Biological Sciences">
-    </div>
-    <div class="about-img">
-        <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Advanced Technologies">
-    </div>
-    <div class="about-img">
-        <img src="https://i.ibb.co/BVCNhjDv/best-research-team.jpg" alt="Best Research Team">
-    </div>
-    <div class="about-img">
-        <img src="https://i.ibb.co/s9CR4R9X/collaboration.jpg" alt="Scientific Collaboration">
-    </div>
-</div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>International Conference on Biological Sciences and Advanced Technologies</h3>
+                    <p>
+                        The <strong>International Conference on Biological Sciences and Advanced Technologies (ICBAT 2025)</strong> brings together visionary minds from academia and industry to explore the latest breakthroughs and innovations shaping the future of life sciences and technology.
+                    </p>
+                    <p>
+                        This interdisciplinary platform will delve into diverse topics such as <em>biotechnology, genomics, biomedical engineering, environmental sciences, nanotechnology, artificial intelligence, machine learning, and synthetic biology</em> — highlighting their impact on research, healthcare, and sustainability.
+                    </p>
+                    <p>
+                        As a <strong>Scopus-indexed</strong> event, ICBAT 2025 offers invaluable opportunities for networking, collaboration, and the exchange of pioneering ideas among global scientists, researchers, and professionals.
+                    </p>
+                </div>
+                <div class="about-images">
+                    <div class="about-img">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Biological Sciences">
+                    </div>
+                    <div class="about-img">
+                        <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Advanced Technologies">
+                    </div>
+                    <div class="about-img">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Research Team">
+                    </div>
+                    <div class="about-img">
+                        <img src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1465&q=80" alt="Scientific Collaboration">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-
-   <!-- Themes Section -->
-<section class="section themes" id="themes">
-  <div class="container">
-    <div class="section-title">
-      <h2>Conference Themes</h2>
-    </div>
-    <div class="theme-cards">
-      
-      <!-- AI, Robotics & Biology-Inspired Technologies -->
-      <div class="theme-card">
-        <div class="theme-img">
-          <img src="https://i.ibb.co/WNq2xvWd/AI-and-robotics.jpg">
+    <!-- Themes Section -->
+    <section class="section themes" id="themes">
+        <div class="container">
+            <div class="section-title">
+                <h2>Conference Themes</h2>
+                <p>Explore the diverse range of topics that will be covered at ICBAT 2025</p>
+            </div>
+            <div class="theme-cards">
+                <div class="theme-card">
+                    <div class="theme-img">
+                        <img src="https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="AI and Robotics">
+                    </div>
+                    <div class="theme-content">
+                        <h3>AI, Robotics & Biology-Inspired Technologies</h3>
+                        <p>Integration of artificial intelligence, robotics, and biology-inspired innovations in research and applications.</p>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-img">
+                        <img src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1465&q=80" alt="Biotechnology">
+                    </div>
+                    <div class="theme-content">
+                        <h3>Biotechnology and Biomedical Applications</h3>
+                        <p>Exploring the latest advancements in biotechnology and their applications in medicine and healthcare.</p>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-img">
+                        <img src="https://images.unsplash.com/photo-1581595219315-a187dd40c322?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Genomics">
+                    </div>
+                    <div class="theme-content">
+                        <h3>Advanced Genomics and Epigenomics</h3>
+                        <p>Cutting-edge research in genomics, epigenetics, and their implications for personalized medicine.</p>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-img">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Synthetic Biology">
+                    </div>
+                    <div class="theme-content">
+                        <h3>Synthetic Biology and Bioengineering</h3>
+                        <p>Innovations in synthetic biology, genetic engineering, and their applications in various fields.</p>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-img">
+                        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Environmental Science">
+                    </div>
+                    <div class="theme-content">
+                        <h3>Environmental Science and Sustainability</h3>
+                        <p>Research on environmental conservation, sustainability, and ecological balance.</p>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-img">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Advanced Technologies">
+                    </div>
+                    <div class="theme-content">
+                        <h3>Advanced Technologies in Biological Research</h3>
+                        <p>Integration of AI, machine learning, and other advanced technologies in biological research.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="theme-content">
-          <h3>AI, Robotics & Biology-Inspired Technologies</h3>
-          <p>Integration of artificial intelligence, robotics, and biology-inspired innovations in research and applications.</p>
-        </div>
-      </div>
-
-      <!-- Biotechnology and Biomedical Applications -->
-      <div class="theme-card">
-        <div class="theme-img">
-          <img src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?auto=format&fit=crop&w=1465&q=80" alt="Biotechnology and Biomedical Applications">
-        </div>
-        <div class="theme-content">
-          <h3>Biotechnology and Biomedical Applications</h3>
-          <p>Exploring the latest advancements in biotechnology and their applications in medicine and healthcare.</p>
-        </div>
-      </div>
-
-      <!-- Advanced Genomics and Epigenomics -->
-      <div class="theme-card">
-        <div class="theme-img">
-          <img src="https://images.unsplash.com/photo-1581595219315-a187dd40c322?auto=format&fit=crop&w=1470&q=80" alt="Advanced Genomics and Epigenomics">
-        </div>
-        <div class="theme-content">
-          <h3>Advanced Genomics and Epigenomics</h3>
-          <p>Cutting-edge research in genomics, epigenetics, and their implications for personalized medicine.</p>
-        </div>
-      </div>
-
-      <!-- Synthetic Biology and Bioengineering -->
-      <div class="theme-card">
-        <div class="theme-img">
-          <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1470&q=80" alt="Synthetic Biology and Bioengineering">
-        </div>
-        <div class="theme-content">
-          <h3>Synthetic Biology and Bioengineering</h3>
-          <p>Innovations in synthetic biology, genetic engineering, and their applications in various fields.</p>
-        </div>
-      </div>
-
-      <!-- Environmental Science and Sustainability -->
-      <div class="theme-card">
-        <div class="theme-img">
-          <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1470&q=80" alt="Environmental Science and Sustainability">
-        </div>
-        <div class="theme-content">
-          <h3>Environmental Science and Sustainability</h3>
-          <p>Research on environmental conservation, sustainability, and ecological balance.</p>
-        </div>
-      </div>
-
-      <!-- Advanced Technologies in Biological Research -->
-      <div class="theme-card">
-        <div class="theme-img">
-          <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1470&q=80" alt="Advanced Technologies in Biological Research">
-        </div>
-        <div class="theme-content">
-          <h3>Advanced Technologies in Biological Research</h3>
-          <p>Integration of AI, machine learning, and other advanced technologies in biological research.</p>
-        </div>
-      </div>
-
-      <!-- Gene Editing and Genome Engineering -->
-      <div class="theme-card">
-        <div class="theme-img">
-          <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?auto=format&fit=crop&w=1470&q=80" alt="Gene Editing and Genome Engineering">
-        </div>
-        <div class="theme-content">
-          <h3>Gene Editing and Genome Engineering</h3>
-          <p>Latest techniques and applications of CRISPR and other genome editing technologies.</p>
-        </div>
-      </div>
-
-      <!-- Stem Cell Biology and Regenerative Medicine -->
-      <div class="theme-card">
-        <div class="theme-img">
-          <img src="https://i.ibb.co/wZ5ppgXT/stem-cell-biology.jpg" alt="Stem Cell Biology and Regenerative Medicine">
-        </div>
-        <div class="theme-content">
-          <h3>Stem Cell Biology and Regenerative Medicine</h3>
-          <p>Exploring stem cell research and its potential for tissue regeneration and therapy.</p>
-        </div>
-      </div>
-
-      <!-- Microbiome and Human Health -->
-      <div class="theme-card">
-        <div class="theme-img">
-          <img src="https://i.ibb.co/pjGyjBTm/microbiome-and-human-health.jpg">
-        </div>
-        <div class="theme-content">
-          <h3>Microbiome and Human Health</h3>
-          <p>Investigating the role of the human microbiome in health and disease.</p>
-        </div>
-      </div>
-
-      <!-- Biological Data Analysis and Computational Biology -->
-      <div class="theme-card">
-        <div class="theme-img">
-          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80" alt="Biological Data Analysis and Computational Biology">
-        </div>
-        <div class="theme-content">
-          <h3>Biological Data Analysis and Computational Biology</h3>
-          <p>Application of computational techniques and data analysis in biological research.</p>
-        </div>
-      </div>
-
-      <!-- Biomedical Imaging and Diagnostics -->
-      <div class="theme-card">
-        <div class="theme-img">
-          <img src="https://i.ibb.co/WN8WxNrC/medical.jpg" alt="Biomedical Imaging and Diagnostics">
-        </div>
-        <div class="theme-content">
-          <h3>Biomedical Imaging and Diagnostics</h3>
-          <p>Advanced imaging technologies and diagnostic methods in biomedical sciences.</p>
-        </div>
-      </div>
-
-      <!-- Biotechnology and Society -->
-      <div class="theme-card">
-        <div class="theme-img">
-          <img src="https://images.unsplash.com/photo-1509475826633-fed577a2c71b?auto=format&fit=crop&w=1470&q=80" alt="Biotechnology and Society">
-        </div>
-        <div class="theme-content">
-          <h3>Biotechnology and Society</h3>
-          <p>Exploring the ethical, social, and economic impacts of biotechnology.</p>
-        </div>
-      </div>
-
-      <!-- Global Health and Infectious Diseases -->
-      <div class="theme-card">
-        <div class="theme-img">
-          <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1470&q=80" alt="Global Health and Infectious Diseases">
-        </div>
-        <div class="theme-content">
-          <h3>Global Health and Infectious Diseases</h3>
-          <p>Research on infectious diseases and strategies for global health improvement.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- Speakers Section -->
     <section class="section speakers" id="speakers">
         <div class="container">
             <div class="section-title">
                 <h2>Keynote Speakers</h2>
+                <p>Meet our distinguished speakers who are leaders in their fields</p>
             </div>
             <div class="speaker-grid">
                 <div class="speaker-card">
                     <div class="speaker-img">
-                        <img src="https://i.ibb.co/20R6ysnB/Screenshot-2025-05-15-185114.png" alt="Dr. Harishchander Anandaram">
+                        <img src="https://i.ibb.co/zWB6KNz3/Screenshot-2025-05-15-185114.png" alt="Dr. Harishchander Anandaram">
                     </div>
                     <div class="speaker-info">
                         <h3>Dr. Harishchander Anandaram</h3>
@@ -1750,7 +1242,7 @@ tr:last-child td {
                     </div>
                     <div class="speaker-info">
                         <h3>Dr. Sathya Sambit</h3>
-                        <p class="position">Research Technician, RIKEN Center for Brain Science,Japan</p>
+                        <p class="position">Research Technician, RIKEN Center for Brain Science, Japan</p>
                         <p>Specialist in neural calcium imaging and biologically inspired recurrent neural network decoders.</p>
                         <div class="speaker-social">
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -1761,7 +1253,7 @@ tr:last-child td {
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-img">
-                        <img src="https://i.ibb.co/mVd1g7c2/Ipshita-nanda.jpg" alt="Dr. Ipseeta Nanda">
+                        <img src="https://i.ibb.co/N6FrwLK8/Ipshita-nanda.jpg" alt="Dr. Ipseeta Nanda">
                     </div>
                     <div class="speaker-info">
                         <h3>Dr. Ipseeta Nanda</h3>
@@ -1783,6 +1275,7 @@ tr:last-child td {
     <div class="container">
         <div class="section-title">
             <h2>Committee Members</h2>
+            <p>Our dedicated team organizing this prestigious event</p>
         </div>
         <div class="committee-members">
             <div class="member-card">
@@ -1851,314 +1344,296 @@ tr:last-child td {
                     <p>International School of Technology and Science for Women</p>
                 </div>
             </div>
-            <!-- Dr. Sivabalan Settu appears twice, so just one card -->
         </div>
     </div>
-</section
-
-   <!-- Awards Section -->
-<section class="section awards" id="awards">
-  <div class="container">
-    <div class="section-title">
-      <h2>Awards & Recognitions</h2>
-    </div>
-    <div class="awards-grid">
-      <!-- Award Card Template -->
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/FLV1YqB2/pexels-karolina-grabowska-4476376-2-1.webp" alt="Best Research Paper Award" />
-        </div>
-        <div class="award-content">
-          <h3>Best Research Paper Award</h3>
-          <p>Recognizing outstanding research contributions.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/5ht44yc7/Young-scientist-award.jpg" alt="Young Scientist Award" />
-        </div>
-        <div class="award-content">
-          <h3>Young Scientist Award</h3>
-          <p>Honoring exceptional research by early-career scientists.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/FLT8RdWt/outstanding-research-contribution.jpg" alt="Outstanding Research Contribution Award" />
-        </div>
-        <div class="award-content">
-          <h3>Outstanding Research Contribution Award</h3>
-          <p>Acknowledging significant contributions to biological sciences and advanced technologies.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/Zp4LcRbD/oral.jpg" alt="Best Oral Presentation Award" />
-        </div>
-        <div class="award-content">
-          <h3>Best Oral Presentation Award</h3>
-          <p>Recognizing excellence in oral presentations.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/xtXgHxy2/best-poster-presentation.jpg" alt="Best Poster Presentation Award" />
-        </div>
-        <div class="award-content">
-          <h3>Best Poster Presentation Award</h3>
-          <p>Honoring outstanding poster presentations.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/tP2QgYPR/best-paper-in-biotech.jpg" alt="Best Paper Award in Biotechnology" />
-        </div>
-        <div class="award-content">
-          <h3>Best Paper Award in Biotechnology</h3>
-          <p>Recognizing outstanding research in biotechnology.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/KcnPTdTR/best-paper-in-bioinformatics.jpg" alt="Best Paper Award in Bioinformatics" />
-        </div>
-        <div class="award-content">
-          <h3>Best Paper Award in Bioinformatics</h3>
-          <p>Honoring exceptional research in bioinformatics.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/j9p3tf30/xyz.jpg" alt="Best Paper Award in Advanced Technologies" />
-        </div>
-        <div class="award-content">
-          <h3>Best Paper Award in Advanced Technologies</h3>
-          <p>Recognizing innovative applications of advanced technologies in biological sciences.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/nN2hHVdM/best-paper-in-advanced-technology.jpg" alt="Innovation Award" />
-        </div>
-        <div class="award-content">
-          <h3>Innovation Award</h3>
-          <p>Recognizing innovative research with potential for practical applications.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://images.unsplash.com/photo-1496180727794-817822f65950?auto=format&fit=crop&w=400&q=80" alt="Excellence in Research Award" />
-        </div>
-        <div class="award-content">
-          <h3>Excellence in Research Award</h3>
-          <p>Honoring outstanding research achievements.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/LzSQBk6Q/science.jpg" alt="Contribution to Science Award" />
-        </div>
-        <div class="award-content">
-          <h3>Contribution to Science Award</h3>
-          <p>Acknowledging significant contributions to biological sciences.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Emerging Researcher Award" />
-        </div>
-        <div class="award-content">
-          <h3>Emerging Researcher Award</h3>
-          <p>Recognizing promising research by emerging scientists.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/wNqhkk94/reviewer.png" alt="Best Reviewer Award" />
-        </div>
-        <div class="award-content">
-          <h3>Best Reviewer Award</h3>
-          <p>Honoring outstanding contributions to peer review.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/bRXvpSVw/student-presentation.jpg" alt="Best Student Presentation Award" />
-        </div>
-        <div class="award-content">
-          <h3>Best Student Presentation Award</h3>
-          <p>Recognizing excellence in student presentations.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/s9CR4R9X/collaboration.jpg" alt="Best Collaborative Research Award" />
-        </div>
-        <div class="award-content">
-          <h3>Best Collaborative Research Award</h3>
-          <p>Honoring outstanding collaborative research efforts.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/SDWcgWwn/translational-research.png" alt="Translational Research Award" />
-        </div>
-        <div class="award-content">
-          <h3>Translational Research Award</h3>
-          <p>Recognizing research with potential for practical applications.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/fBwHQ2C/basic-research.jpg" alt="Basic Research Award" />
-        </div>
-        <div class="award-content">
-          <h3>Basic Research Award</h3>
-          <p>Honoring outstanding basic research contributions.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/JRSXQdSL/applied-research.png" alt="Applied Research Award" />
-        </div>
-        <div class="award-content">
-          <h3>Applied Research Award</h3>
-          <p>Recognizing outstanding applied research contributions.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/QvGC4df3/interdeciplinary.jpg" alt="Interdisciplinary Research Award" />
-        </div>
-        <div class="award-content">
-          <h3>Interdisciplinary Research Award</h3>
-          <p>Honoring research that integrates multiple disciplines.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/GQchLfk0/best-use-of-advanced-tech.jpg" alt="Best Use of Advanced Technologies Award" />
-        </div>
-        <div class="award-content">
-          <h3>Best Use of Advanced Technologies Award</h3>
-          <p>Recognizing innovative use of advanced technologies in research.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/JRb1mgtw/outstanding-publication.jpg" alt="Outstanding Publication Award" />
-        </div>
-        <div class="award-content">
-          <h3>Outstanding Publication Award</h3>
-          <p>Honoring outstanding publications in biological sciences.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/8nPW6wF1/early-career-researcher.png" alt="Early Career Researcher Award" />
-        </div>
-        <div class="award-content">
-          <h3>Early Career Researcher Award</h3>
-          <p>Recognizing outstanding research by early-career researchers.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/jvMHgCMX/mentorship.jpg" alt="Mentorship Award" />
-        </div>
-        <div class="award-content">
-          <h3>Mentorship Award</h3>
-          <p>Honoring outstanding mentorship in research.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/BVCNhjDv/best-research-team.jpg" alt="Best Research Team Award" />
-        </div>
-        <div class="award-content">
-          <h3>Best Research Team Award</h3>
-          <p>Recognizing outstanding research team contributions.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?auto=format&fit=crop&w=400&q=80" alt="Lifetime Achievement Award" />
-        </div>
-        <div class="award-content">
-          <h3>Lifetime Achievement Award</h3>
-          <p>Honoring significant contributions to biological sciences over a lifetime.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/bjgStygm/innovation-methodalogy.jpg" alt="Innovative Methodology Award" />
-        </div>
-        <div class="award-content">
-          <h3>Innovative Methodology Award</h3>
-          <p>Recognizing innovative research methodologies.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-
-      <div class="award-card">
-        <div class="award-img">
-          <img src="https://i.ibb.co/nynjCfj/impact-reward.jpg" alt="Impact Award" />
-        </div>
-        <div class="award-content">
-          <h3>Impact Award</h3>
-          <p>Honoring research with significant impact on society or the field.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
-
-   <section class="section registration" id="registration">
+   <!-- Awards Section -->
+<section class="section" id="awards">
+    <div class="container">
+        <div class="section-title">
+            <h2>Awards & Recognitions</h2>
+            <p>Celebrating excellence in biological sciences and advanced technologies</p>
+        </div>
+        <div class="awards-grid">
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/FLV1YqB2/pexels-karolina-grabowska-4476376-2-1.webp" alt="Best Research Paper Award">
+                </div>
+                <div class="award-content">
+                    <h3>Best Research Paper Award</h3>
+                    <p>Recognizing outstanding research contributions.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/5ht44yc7/Young-scientist-award.jpg" alt="Young Scientist Award">
+                </div>
+                <div class="award-content">
+                    <h3>Young Scientist Award</h3>
+                    <p>Honoring exceptional research by early-career scientists.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/FLT8RdWt/outstanding-research-contribution.jpg" alt="Outstanding Research Contribution Award">
+                </div>
+                <div class="award-content">
+                    <h3>Outstanding Research Contribution Award</h3>
+                    <p>Acknowledging significant contributions to biological sciences and advanced technologies.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/Zp4LcRbD/oral.jpg" alt="Best Oral Presentation Award">
+                </div>
+                <div class="award-content">
+                    <h3>Best Oral Presentation Award</h3>
+                    <p>Recognizing excellence in oral presentations.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/xtXgHxy2/best-poster-presentation.jpg" alt="Best Poster Presentation Award">
+                </div>
+                <div class="award-content">
+                    <h3>Best Poster Presentation Award</h3>
+                    <p>Honoring outstanding poster presentations.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/tP2QgYPR/best-paper-in-biotech.jpg" alt="Best Paper Award in Biotechnology">
+                </div>
+                <div class="award-content">
+                    <h3>Best Paper Award in Biotechnology</h3>
+                    <p>Recognizing outstanding research in biotechnology.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/KcnPTdTR/best-paper-in-bioinformatics.jpg" alt="Best Paper Award in Bioinformatics">
+                </div>
+                <div class="award-content">
+                    <h3>Best Paper Award in Bioinformatics</h3>
+                    <p>Honoring exceptional research in bioinformatics.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/j9p3tf30/xyz.jpg" alt="Best Paper Award in Advanced Technologies">
+                </div>
+                <div class="award-content">
+                    <h3>Best Paper Award in Advanced Technologies</h3>
+                    <p>Recognizing innovative applications of advanced technologies in biological sciences.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/nN2hHVdM/best-paper-in-advanced-technology.jpg" alt="Innovation Award">
+                </div>
+                <div class="award-content">
+                    <h3>Innovation Award</h3>
+                    <p>Recognizing innovative research with potential for practical applications.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://images.unsplash.com/photo-1496180727794-817822f65950?auto=format&fit=crop&w=400&q=80" alt="Excellence in Research Award">
+                </div>
+                <div class="award-content">
+                    <h3>Excellence in Research Award</h3>
+                    <p>Honoring outstanding research achievements.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/LzSQBk6Q/science.jpg" alt="Contribution to Science Award">
+                </div>
+                <div class="award-content">
+                    <h3>Contribution to Science Award</h3>
+                    <p>Acknowledging significant contributions to biological sciences.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Emerging Researcher Award">
+                </div>
+                <div class="award-content">
+                    <h3>Emerging Researcher Award</h3>
+                    <p>Recognizing promising research by emerging scientists.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/wNqhkk94/reviewer.png" alt="Best Reviewer Award">
+                </div>
+                <div class="award-content">
+                    <h3>Best Reviewer Award</h3>
+                    <p>Honoring outstanding contributions to peer review.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/bRXvpSVw/student-presentation.jpg" alt="Best Student Presentation Award">
+                </div>
+                <div class="award-content">
+                    <h3>Best Student Presentation Award</h3>
+                    <p>Recognizing excellence in student presentations.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/s9CR4R9X/collaboration.jpg" alt="Best Collaborative Research Award">
+                </div>
+                <div class="award-content">
+                    <h3>Best Collaborative Research Award</h3>
+                    <p>Honoring outstanding collaborative research efforts.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/SDWcgWwn/translational-research.png" alt="Translational Research Award">
+                </div>
+                <div class="award-content">
+                    <h3>Translational Research Award</h3>
+                    <p>Recognizing research with potential for practical applications.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/fBwHQ2C/basic-research.jpg" alt="Basic Research Award">
+                </div>
+                <div class="award-content">
+                    <h3>Basic Research Award</h3>
+                    <p>Honoring outstanding basic research contributions.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/JRSXQdSL/applied-research.png" alt="Applied Research Award">
+                </div>
+                <div class="award-content">
+                    <h3>Applied Research Award</h3>
+                    <p>Recognizing outstanding applied research contributions.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/QvGC4df3/interdeciplinary.jpg" alt="Interdisciplinary Research Award">
+                </div>
+                <div class="award-content">
+                    <h3>Interdisciplinary Research Award</h3>
+                    <p>Honoring research that integrates multiple disciplines.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/GQchLfk0/best-use-of-advanced-tech.jpg" alt="Best Use of Advanced Technologies Award">
+                </div>
+                <div class="award-content">
+                    <h3>Best Use of Advanced Technologies Award</h3>
+                    <p>Recognizing innovative use of advanced technologies in research.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/JRb1mgtw/outstanding-publication.jpg" alt="Outstanding Publication Award">
+                </div>
+                <div class="award-content">
+                    <h3>Outstanding Publication Award</h3>
+                    <p>Honoring outstanding publications in biological sciences.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/8nPW6wF1/early-career-researcher.png" alt="Early Career Researcher Award">
+                </div>
+                <div class="award-content">
+                    <h3>Early Career Researcher Award</h3>
+                    <p>Recognizing outstanding research by early-career researchers.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/jvMHgCMX/mentorship.jpg" alt="Mentorship Award">
+                </div>
+                <div class="award-content">
+                    <h3>Mentorship Award</h3>
+                    <p>Honoring outstanding mentorship in research.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/BVCNhjDv/best-research-team.jpg" alt="Best Research Team Award">
+                </div>
+                <div class="award-content">
+                    <h3>Best Research Team Award</h3>
+                    <p>Recognizing outstanding research team contributions.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?auto=format&fit=crop&w=400&q=80" alt="Lifetime Achievement Award">
+                </div>
+                <div class="award-content">
+                    <h3>Lifetime Achievement Award</h3>
+                    <p>Honoring significant contributions to biological sciences over a lifetime.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/bjgStygm/innovation-methodalogy.jpg" alt="Innovative Methodology Award">
+                </div>
+                <div class="award-content">
+                    <h3>Innovative Methodology Award</h3>
+                    <p>Recognizing innovative research methodologies.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img">
+                    <img src="https://i.ibb.co/nynjCfj/impact-reward.jpg" alt="Impact Award">
+                </div>
+                <div class="award-content">
+                    <h3>Impact Award</h3>
+                    <p>Honoring research with significant impact on society or the field.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Registration Section -->
+    <section class="section registration" id="registration">
         <div class="container">
             <div class="section-title">
                 <h2>Registration</h2>
+                <p>Join us for this exciting conference</p>
             </div>
             <div class="pricing-table">
                 <table>
@@ -2193,154 +1668,315 @@ tr:last-child td {
             </div>
         </div>
     </section>
-
-   <!-- Call for Papers Section -->
-<section class="section call-for-papers" id="call-for-papers">
+  
+  <!-- Outcomes Section -->
+<section class="section outcomes" id="outcomes">
     <div class="container">
         <div class="section-title">
-            <h2>Call for Papers</h2>
+            <h2>Conference Outcomes</h2>
+            <p>Key benefits and achievements from ICBAT 2025</p>
         </div>
         
-        <div class="paper-guidelines">
-            <h3>📌 Submission Guidelines</h3>
-            <ul>
-                <li>✅ Original, unpublished work not submitted elsewhere.</li>
-                <li>✅ Written in English using the official conference format.</li>
-                <li>✅ Submit via our online submission portal only.</li>
-                <li>✅ Peer-reviewed by field experts.</li>
-                <li>✅ Limit of 8 pages per paper.</li>
-            </ul>
-
-            <h3>📚 Publication Opportunities</h3>
-            <p>
-                All accepted papers will appear in the official conference proceedings. Selected high-quality papers will be invited for publication in special issues of renowned <strong>SCOPUS INDEXED</strong> journals.
-            </p>
-        </div>
-
-        <div class="deadlines">
-            <div class="deadline-card">
-                <h4>📝 Abstract Submission</h4>
-                <p class="date">March 15, 2025</p>
+        <div class="outcomes-grid">
+            <!-- Outcome 1 -->
+            <div class="outcome-card">
+                <div class="outcome-icon">
+                    <i class="fas fa-share-alt"></i>
+                </div>
+                <div class="outcome-content">
+                    <h3>Dissemination of Research</h3>
+                    <p>Sharing the latest research findings and technological innovations in biological sciences and advanced technologies with the global scientific community.</p>
+                </div>
             </div>
-            <div class="deadline-card">
-                <h4>📄 Full Paper Submission</h4>
-                <p class="date">April 10, 2025</p>
+            
+            <!-- Outcome 2 -->
+            <div class="outcome-card">
+                <div class="outcome-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="outcome-content">
+                    <h3>Collaboration & Networking</h3>
+                    <p>Facilitating meaningful exchange of ideas and fostering collaborations among researchers, academics, and industry professionals.</p>
+                </div>
             </div>
-            <div class="deadline-card">
-                <h4>📢 Notification of Acceptance</h4>
-                <p class="date">April 30, 2025</p>
+            
+            <!-- Outcome 3 -->
+            <div class="outcome-card">
+                <div class="outcome-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <div class="outcome-content">
+                    <h3>Future Research Directions</h3>
+                    <p>Identifying emerging trends and new opportunities that will shape the future of biological sciences and technological innovation.</p>
+                </div>
             </div>
-            <div class="deadline-card">
-                <h4>✅ Camera-Ready Paper</h4>
-                <p class="date">May 10, 2025</p>
+            
+            <!-- Outcome 4 -->
+            <div class="outcome-card">
+                <div class="outcome-icon">
+                    <i class="fas fa-atom"></i>
+                </div>
+                <div class="outcome-content">
+                    <h3>Interdisciplinary Innovation</h3>
+                    <p>Promoting cross-disciplinary research and innovative approaches that bridge biological sciences with advanced technologies.</p>
+                </div>
             </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="#" class="btn stylish-btn">Submit Your Paper</a>
         </div>
     </div>
 </section>
 
-  
-  <section id="past-events" class="past-events-section">
-  <div class="container">
-    <h2 class="section-title">Our Past Events</h2>
-    <div class="events-gallery">
-      <div class="event-card">
-        <img src="https://i.ibb.co/mFDsrg1q/1.png" alt="Past Event 1" />
-      </div>
-      <div class="event-card">
-        <img src="https://i.ibb.co/FL7XHtt8/2.png" alt="Past Event 2" />
-      </div>
-      <div class="event-card">
-        <img src="https://i.ibb.co/wh8myfdM/3.png" alt="Past Event 3" />
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- Call for Papers Section -->
+    <section class="section" id="call-for-papers">
+        <div class="container">
+            <div class="section-title">
+                <h2>Call for Papers</h2>
+                <p>Submit your research to be part of this prestigious conference</p>
+            </div>
+            
+            <div class="paper-guidelines">
+                <h3>📌 Submission Guidelines</h3>
+                <ul>
+                    <li>✅ Original, unpublished work not submitted elsewhere.</li>
+                    <li>✅ Written in English using the official conference format.</li>
+                    <li>✅ Submit via our online submission portal only.</li>
+                    <li>✅ Peer-reviewed by field experts.</li>
+                    <li>✅ Limit of 8 pages per paper.</li>
+                </ul>
 
-  <!-- Partners Section -->
-<section class="section" id="partners" style="background: #f9f9f9;">
-  <div class="container">
-    <div class="section-title">
-      <h2>Our Partners</h2>
-    </div>
+                <h3>📚 Publication Opportunities</h3>
+                <p>
+                    All accepted papers will appear in the official conference proceedings. Selected high-quality papers will be invited for publication in special issues of renowned <strong>SCOPUS INDEXED</strong> journals.
+                </p>
+            </div>
 
-    <div class="carousel-wrapper">
-      <div class="carousel-track" id="logoTrack">
-        <div class="partner-logo">
-          <img src="https://i.ibb.co/wrjPgJ4d/LOGO.jpg" alt="Partner 1" />
+            <div class="deadlines">
+                <div class="deadline-card">
+                    <h4>📝 Abstract Submission</h4>
+                    <p class="date">March 15, 2025</p>
+                </div>
+                <div class="deadline-card">
+                    <h4>📄 Full Paper Submission</h4>
+                    <p class="date">April 10, 2025</p>
+                </div>
+                <div class="deadline-card">
+                    <h4>📢 Notification of Acceptance</h4>
+                    <p class="date">April 30, 2025</p>
+                </div>
+                <div class="deadline-card">
+                    <h4>✅ Camera-Ready Paper</h4>
+                    <p class="date">May 10, 2025</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#" class="btn">Submit Your Paper</a>
+            </div>
         </div>
-        <div class="partner-logo">
-          <img src="https://i.ibb.co/Lz5hzcqL/Black-and-Grey-Copywriter-Personal-Logo.png" alt="Partner 2" />
+    </section>
+
+    <!-- Past Events Section -->
+    <section class="section" id="past-events">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Past Events</h2>
+                <p>See highlights from our previous conferences</p>
+            </div>
+            <div class="events-gallery">
+                <div class="event-card">
+                    <img src="https://i.ibb.co/Gv7YVfP3/1.png" alt="Past Event 1">
+                </div>
+                <div class="event-card">
+                    <img src="https://i.ibb.co/f7gXXZV/2.png" alt="Past Event 2">
+                </div>
+                <div class="event-card">
+                    <img src="https://i.ibb.co/jPMd9MsS/3.png" alt="Past Event 3">
+                </div>
+            </div>
         </div>
-        <div class="partner-logo">
-          <img src="https://i.ibb.co/YFc8k1Tm/scopus-logo.png" alt="Scopus" />
+    </section>
+
+    <!-- Partners Section -->
+    <section class="section" id="partners">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Partners</h2>
+                <p>Organizations supporting this conference</p>
+            </div>
+            <div class="partners-logos">
+                <div class="partner-logo">
+                    <img src="https://i.ibb.co/wrjPgJ4d/LOGO.jpg" alt="Partner 1">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://i.ibb.co/Lz5hzcqL/Black-and-Grey-Copywriter-Personal-Logo.png" alt="Partner 2">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://i.ibb.co/YFc8k1Tm/scopus-logo.png" alt="Partner 3">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://i.ibb.co/rfmcLR2F/Screenshot-2025-05-15-223028.png" alt="Partner 4">
+                </div>
+                
+            </div>
         </div>
-        <div class="partner-logo">
-          <img src="https://i.ibb.co/rfmcLR2F/Screenshot-2025-05-15-223028.png" alt="Partner 3" />
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with the conference organizers</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>London, UK</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <a href="mailto:info@icbat.uk">info@icbat.uk</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <a href="tel:+441234567890">+44 123 456 7890</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Any Query? Send Us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <h2>ICBAT 2025</h2>
+                    </div>
+                    <p>The International Conference on Biological Sciences and Advanced Technologies brings together researchers and professionals from around the world.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#themes">Themes</a></li>
+                        <li><a href="#speakers">Speakers</a></li>
+                        <li><a href="#registration">Registration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#call-for-papers">Call for Papers</a></li>
+                        <li><a href="#committee">Committee</a></li>
+                        <li><a href="#awards">Awards</a></li>
+                        <li><a href="#past-events">Past Events</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter to get updates about the conference.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ICBAT - International Conference on Biological Sciences and Advanced Technologies. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('nav');
         
-      </div>
-    </div>
-  </div>
-</section>
-
-          <!-- Contact Us Section -->
-<div id="contact" class="section" style="background: #f0f8ff; padding: 60px 20px; font-family: 'Poppins', sans-serif;">
-  <div class="container">
-    <div class="section-title" style="text-align: center; margin-bottom: 40px;">
-      <h2 style="font-size: 2.5rem; color: #003366;">Contact Us</h2>
-    </div>
-
-    <div class="contact-grid" style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; align-items: flex-start;">
-      
-      <!-- Contact Information -->
-      <div class="contact-info" style="flex: 1 1 300px;">
-        <div class="contact-item" style="margin-bottom: 20px; display: flex; align-items: center;">
-          <i class="fas fa-map-marker-alt" style="font-size: 1.5rem; color: #00aa88; margin-right: 15px;"></i>
-          <div>
-            <h4 style="margin: 0 0 5px; color: #003366;">Location</h4>
-            <p style="margin: 0;">London, UK</p>
-          </div>
-        </div>
-        <div class="contact-item" style="margin-bottom: 20px; display: flex; align-items: center;">
-          <i class="fas fa-envelope" style="font-size: 1.5rem; color: #00aa88; margin-right: 15px;"></i>
-          <div>
-            <h4 style="margin: 0 0 5px; color: #003366;">Email</h4>
-            <a href="mailto:info@icbat.uk" style="text-decoration: none; color: #0055aa;">info@icbat.uk</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Message Form -->
-      <div class="contact-form" style="flex: 1 1 400px; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1);">
-        <h3 style="margin-bottom: 20px; color: #003366;">Any Query? Send Us a Message</h3>
-        <form>
-          <div class="form-group" style="margin-bottom: 15px;">
-            <label for="name" style="display: block; margin-bottom: 5px;">Your Name</label>
-            <input type="text" id="name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
-          </div>
-          <div class="form-group" style="margin-bottom: 15px;">
-            <label for="email" style="display: block; margin-bottom: 5px;">Your Email</label>
-            <input type="email" id="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
-          </div>
-          <div class="form-group" style="margin-bottom: 15px;">
-            <label for="subject" style="display: block; margin-bottom: 5px;">Subject</label>
-            <input type="text" id="subject" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
-          </div>
-          <div class="form-group" style="margin-bottom: 20px;">
-            <label for="message" style="display: block; margin-bottom: 5px;">Your Message</label>
-            <textarea id="message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;"></textarea>
-          </div>
-          <button type="submit" class="submit-btn" style="padding: 10px 20px; background: #00aa88; color: #fff; border: none; border-radius: 6px; cursor: pointer;">Send Message</button>
-        </form>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                document.getElementById('header').classList.add('scrolled');
+            } else {
+                document.getElementById('header').classList.remove('scrolled');
+            }
+        });
+        
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.fade-in-left, .fade-in-right');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateX(0)';
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>
