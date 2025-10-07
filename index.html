@@ -693,6 +693,68 @@
             display: block;
         }
         
+        /* Award Winners - Minimal Design */
+        .winners-grid-minimal {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 40px 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .winner-card-minimal {
+            background: white;
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            text-align: center;
+            border-top: 4px solid;
+            border-image: linear-gradient(135deg, var(--secondary), var(--accent)) 1;
+        }
+
+        .winner-card-minimal:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .winner-image-minimal {
+            margin-bottom: 20px;
+        }
+
+        .winner-image-minimal img {
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 3px solid var(--secondary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .winner-card-minimal h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .award-badge {
+            background: linear-gradient(135deg, #f0f4f8, #e2e8f0);
+            color: var(--accent);
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            border: 1px solid rgba(231, 76, 60, 0.1);
+        }
+        
         /* Partners */
         .partners-logos {
             display: grid;
@@ -1895,6 +1957,35 @@ build the foundation</p>
                 </div>
                 <div class="event-card">
                     <img src="https://i.ibb.co/jPMd9MsS/3.png" alt="Past Event 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2024 Award Winners Section -->
+    <section class="section" id="award-winners">
+        <div class="container">
+            <div class="section-title">
+                <h2>2024 Award Winners</h2>
+                <p>Celebrating excellence in AI-driven engineering innovations</p>
+            </div>
+            <div class="winners-grid-minimal">
+                <!-- Winner 1 -->
+                <div class="winner-card-minimal">
+                    <div class="winner-image-minimal">
+                        <img src="2.jpeg" alt="Dr. Sateesh Kumar Rongali">
+                    </div>
+                    <h3>Dr. Sateesh Kumar Rongali</h3>
+                    <div class="award-badge">GLOBAL AI AWARD</div>
+                </div>
+
+                <!-- Winner 2 -->
+                <div class="winner-card-minimal">
+                    <div class="winner-image-minimal">
+                        <img src="1.jpeg" alt="Raviteja Guntupalli">
+                    </div>
+                    <h3>Raviteja Guntupalli</h3>
+                    <div class="award-badge">AI GROWTH ENABLER AWARD</div>
                 </div>
             </div>
         </div>
