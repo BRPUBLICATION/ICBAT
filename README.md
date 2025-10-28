@@ -154,8 +154,6 @@ ICBAT-main/
 See [LICENSE.txt](LICENSE.txt) for details.
 
 ## 👥 Credits
-
-- **Original Design:** CodePen (Anushka-Singh)
 - **Organizers:** Institute of Global Technology (IGT) & IEEE VISAT
 - **Conference:** ICBAT 2025
 
