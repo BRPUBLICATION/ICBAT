@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICBAT 2023 - Past Conference</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --text: #333333;
+            --bg-light: #f9f9f9;
+            --card-bg: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+            background-color: var(--bg-light);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: white;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .conference-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+        
+        .conference-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .conference-date {
+            background: var(--accent);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .conference-content {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin: -3rem auto 3rem;
+            max-width: 1000px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .conference-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+        
+        .conference-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #eee;
+        }
+        
+        .conference-section h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .conference-section h2 i {
+            color: var(--secondary);
+        }
+        
+        .speakers-list, .committee-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .speakers-list li, .committee-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .speakers-list li:last-child, .committee-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .speaker-name {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        
+        .speaker-designation {
+            color: var(--text);
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .conference-header h1 {
+                font-size: 2rem;
+            }
+            
+            .conference-content {
+                padding: 2rem;
+                margin: -2rem auto 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo-text">
+                <h1>ICBAT 2023</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="past-conferences.html">Past Conferences</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="conference-header">
+        <div class="container">
+            <h1>ICBAT 2023</h1>
+            <div class="conference-date">10th to 11th June 2023</div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="conference-content">
+                <p>The International Conference on Biological Sciences, Artificial Intelligence, Machine Learning, and Advanced Technologies (ICBAT 2023) was held on 10th to 11th June 2023 successfully and brought together eminent researchers, academicians, scientists, and industry professionals from across the globe to deliberate on emerging trends and innovations shaping the future of life sciences and advanced technologies.</p>
+                
+                <p>ICBAT 2023 served as a strong interdisciplinary platform emphasizing the convergence of Artificial Intelligence, Robotics, and Biology-Inspired Technologies, highlighting their growing integration in scientific research, healthcare solutions, and real-world applications. The conference showcased how intelligent systems and bio-inspired innovations are accelerating discovery and technological advancement.</p>
+                
+                <p>A significant focus of the conference was on Biotechnology and Biomedical Applications, where recent advancements in medical biotechnology, diagnostics, therapeutics, and healthcare innovations were presented. These sessions demonstrated the critical role of biotechnology in addressing complex medical and societal challenges.</p>
+                
+                <p>The conference featured advanced discussions on Genomics and Epigenomics, presenting cutting-edge research in genome analysis, epigenetic regulation, and gene–environment interactions. The implications of these advancements for personalized and precision medicine were highlighted as transformative pathways for future healthcare.</p>
+                
+                <p>Synthetic Biology and Bioengineering formed another major thematic area, with sessions exploring innovations in genetic engineering, synthetic biological systems, and bio-fabrication technologies. These developments were presented as key drivers for progress across medicine, agriculture, environmental management, and industrial biotechnology.</p>
+                
+                <p>Dedicated sessions on Environmental Science and Sustainability addressed critical issues related to environmental conservation, ecological balance, and sustainable development. Researchers emphasized the role of biological sciences and advanced technologies in mitigating environmental challenges and promoting long-term sustainability.</p>
+                
+                <p>The integration of Advanced Technologies in Biological Research, particularly artificial intelligence and machine learning, was a recurring theme throughout the conference. Presentations highlighted the use of computational intelligence, automation, and data-driven approaches in biological modeling, predictive analytics, and experimental research.</p>
+                
+                <p>Breakthroughs in Gene Editing and Genome Engineering, including CRISPR-based technologies, were extensively discussed. The sessions focused on therapeutic applications, regulatory considerations, and the future potential of gene-editing tools in treating genetic and complex diseases.</p>
+                
+                <p>Advances in Stem Cell Biology and Regenerative Medicine were showcased, highlighting progress in tissue regeneration, disease modeling, and cellular therapies. These discussions underscored the promise of stem cell research in advancing personalized and regenerative healthcare.</p>
+                
+                <p>The conference also explored the rapidly evolving field of the Microbiome and Human Health, examining the complex interactions between microbial communities and human physiology. Research presented emphasized microbiome-based diagnostics and therapeutic strategies.</p>
+                
+                <p>Recognizing the importance of data-intensive research, ICBAT 2023 included sessions on Biological Data Analysis and Computational Biology, focusing on computational methods for analyzing large-scale biological data and modeling complex biological systems.</p>
+                
+                <p>Innovations in Biomedical Imaging and Diagnostics were highlighted through presentations on advanced imaging technologies and AI-assisted diagnostic tools, demonstrating their impact on disease detection, monitoring, and clinical decision-making.</p>
+                
+                <p>Beyond scientific innovation, ICBAT 2023 addressed Biotechnology and Society, with discussions on ethical, legal, and social implications of emerging biotechnologies. These sessions emphasized responsible innovation, governance, and societal engagement.</p>
+                
+                <p>The conference also featured discussions on Global Health and Infectious Diseases, focusing on the role of biotechnology and advanced technologies in addressing global health challenges, emerging pathogens, and pandemic preparedness.</p>
+                
+                <p>Overall, ICBAT 2023 provided a valuable platform for networking, collaboration, and the exchange of pioneering ideas among global experts. The conference successfully fostered interdisciplinary dialogue and contributed meaningfully to advancements at the intersection of biological sciences, artificial intelligence, and advanced technologies.</p>
+
+                <div class="conference-section">
+                    <h2><i class="fas fa-microphone"></i> Keynote Speakers</h2>
+                    <ul class="speakers-list">
+                        <li>
+                            <div class="speaker-name">Dr. Harishchander Anandaram</div>
+                            <div class="speaker-designation">Assistant Professor (Senior Grade), School of Artificial Intelligence, Coimbatore</div>
+                        </li>
+                        <li>
+                            <div class="speaker-name">Anusha Nerella</div>
+                            <div class="speaker-designation">Senior Software Engineer - Forward-thinking software engineer who has delivered enterprise-grade solutions across government and global financial institutions. She began her career at the U.S. Patent and Trademark Office, contributing to large-scale modernization initiatives. She later held key engineering roles at Citibank and Barclays, driving application modernization and integrating machine learning into legacy platforms. She is currently working with a major global fintech firm, focusing on institutional trading systems, advanced market data infrastructure, and intelligent automation for high-performance financial platforms.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="conference-section">
+                    <h2><i class="fas fa-user-tie"></i> Session Chair</h2>
+                    <ul class="speakers-list">
+                        <li>
+                            <div class="speaker-name">Dr. Harishchander Anandaram</div>
+                            <div class="speaker-designation">Assistant Professor (Senior Grade), School of Artificial Intelligence</div>
+                        </li>
+                        <li>
+                            <div class="speaker-name">Anusha Nerella</div>
+                            <div class="speaker-designation">Senior Software Engineer</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="conference-section">
+                    <h2><i class="fas fa-users"></i> Review Committee Members</h2>
+                    <ul class="committee-list">
+                        <li>
+                            <div class="speaker-name">Dr. Harishchander Anandaram</div>
+                            <div class="speaker-designation">Assistant Professor (Senior Grade), School of Artificial Intelligence</div>
+                        </li>
+                        <li>
+                            <div class="speaker-name">Anusha Nerella</div>
+                            <div class="speaker-designation">Senior Software Engineer</div>
+                        </li>
+                        <li>
+                            <div class="speaker-name">Mohit Tiwari</div>
+                            <div class="speaker-designation">Bharati Vidyapeeth's College of Engineering, Delhi</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="past-conferences.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Past Conferences
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+

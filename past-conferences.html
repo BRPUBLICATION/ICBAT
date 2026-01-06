@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Conferences - ICBAT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --text: #333333;
+            --bg-light: #f9f9f9;
+            --card-bg: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--bg-light);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: white;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 5rem 0 3rem;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .past-conferences {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .conference-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--secondary);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .conference-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .conference-card h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--secondary);
+        }
+        
+        .conference-date {
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            display: inline-block;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .conference-summary {
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .read-more {
+            color: var(--secondary);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: var(--primary);
+            gap: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .past-conferences {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo-text">
+                <h1>ICBAT Past Conferences</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#past-conferences">All Conferences</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Past Conferences</h1>
+            <p>Explore our successful conferences from previous years</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="past-conferences">
+                <a href="icbat-2024.html" class="conference-card">
+                    <h3>ICBAT 2024</h3>
+                    <div class="conference-date">1st and 2nd June 2024</div>
+                    <div class="conference-summary">
+                        <p>The International Conference on Biological Sciences, Artificial Intelligence, Machine Learning, and Advanced Technologies (ICBAT 2024) brought together visionary minds from academia, research institutions, and industry to explore groundbreaking innovations shaping the future of life sciences and advanced technologies.</p>
+                    </div>
+                    <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <a href="icbat-2023.html" class="conference-card">
+                    <h3>ICBAT 2023</h3>
+                    <div class="conference-date">10th to 11th June 2023</div>
+                    <div class="conference-summary">
+                        <p>The International Conference on Biological Sciences, Artificial Intelligence, Machine Learning, and Advanced Technologies (ICBAT 2023) successfully brought together eminent researchers, academicians, scientists, and industry professionals from across the globe to deliberate on emerging trends and innovations.</p>
+                    </div>
+                    <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <a href="icbat-2022.html" class="conference-card">
+                    <h3>ICBAT 2022</h3>
+                    <div class="conference-date">3rd and 4th June 2022</div>
+                    <div class="conference-summary">
+                        <p>The International Conference on Biological Sciences, Artificial Intelligence, Machine Learning, and Advanced Technologies (ICBAT 2022) was successfully conducted, bringing together researchers, academicians, technologists, and industry professionals from diverse disciplines.</p>
+                    </div>
+                    <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+

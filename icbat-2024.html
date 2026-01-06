@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICBAT 2024 - Past Conference</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --text: #333333;
+            --bg-light: #f9f9f9;
+            --card-bg: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+            background-color: var(--bg-light);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: white;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .conference-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+        
+        .conference-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .conference-date {
+            background: var(--accent);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .conference-content {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin: -3rem auto 3rem;
+            max-width: 1000px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .conference-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+        
+        .conference-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #eee;
+        }
+        
+        .conference-section h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .conference-section h2 i {
+            color: var(--secondary);
+        }
+        
+        .speakers-list, .committee-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .speakers-list li, .committee-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .speakers-list li:last-child, .committee-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .speaker-name {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        
+        .speaker-designation {
+            color: var(--text);
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .conference-header h1 {
+                font-size: 2rem;
+            }
+            
+            .conference-content {
+                padding: 2rem;
+                margin: -2rem auto 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo-text">
+                <h1>ICBAT 2024</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="past-conferences.html">Past Conferences</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="conference-header">
+        <div class="container">
+            <h1>ICBAT 2024</h1>
+            <div class="conference-date">1st and 2nd June 2024</div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="conference-content">
+                <p>The International Conference on Biological Sciences, Artificial Intelligence, Machine Learning, and Advanced Technologies (ICBAT 2024) was held on 1st and 2nd June 2024 and brought together visionary minds from academia, research institutions, and industry to explore groundbreaking innovations shaping the future of life sciences and advanced technologies.</p>
+                
+                <p>The conference served as a robust interdisciplinary platform emphasizing the convergence of Artificial Intelligence, Robotics, and Biology-Inspired Technologies, highlighting how intelligent systems, automation, and bio-inspired innovations are transforming scientific research and real-world applications. Discussions underscored the growing role of AI-driven decision-making, robotic systems, and biologically inspired designs in accelerating discovery and innovation.</p>
+                
+                <p>A major focus of ICBAT 2024 was Biotechnology and Biomedical Applications, where participants explored recent advancements in medical biotechnology, diagnostics, therapeutics, and healthcare solutions. These sessions demonstrated how biotechnological innovations are addressing complex medical challenges and improving patient outcomes.</p>
+                
+                <p>The conference featured in-depth deliberations on Advanced Genomics and Epigenomics, showcasing cutting-edge research in genome sequencing, epigenetic regulation, and gene–environment interactions. The implications of these advances for personalized and precision medicine were extensively discussed, highlighting their potential to revolutionize disease prediction, prevention, and treatment.</p>
+                
+                <p>Synthetic Biology and Bioengineering emerged as another key theme, with sessions focusing on genetic engineering, engineered biological systems, and novel bio-fabrication techniques. These innovations were presented as transformative tools with applications spanning healthcare, agriculture, environmental management, and industrial biotechnology.</p>
+                
+                <p>Addressing environmental challenges, the conference included dedicated discussions on Environmental Science and Sustainability, emphasizing research on ecosystem conservation, climate resilience, and sustainable resource management. These sessions highlighted the critical role of biological sciences and technology in maintaining ecological balance and supporting sustainable development goals.</p>
+                
+                <p>The integration of Advanced Technologies in Biological Research, particularly artificial intelligence and machine learning, was a central theme throughout the conference. Speakers demonstrated how computational intelligence, automation, and data-driven approaches are reshaping experimental design, biological modeling, and predictive analytics.</p>
+                
+                <p>Significant attention was given to Gene Editing and Genome Engineering, with presentations on breakthroughs in CRISPR and next-generation editing tools. The therapeutic potential of these technologies for treating genetic disorders and complex diseases was explored alongside discussions on safety and regulation.</p>
+                
+                <p>Sessions on Stem Cell Biology and Regenerative Medicine highlighted advances in tissue engineering, cellular therapies, and disease modeling. Researchers showcased the promise of stem cells in regenerative treatments and personalized therapeutic strategies.</p>
+                
+                <p>The conference also explored the rapidly expanding field of the Microbiome and Human Health, examining the intricate relationships between microbial communities and human physiology, immunity, and disease. These discussions emphasized microbiome-based diagnostics and therapeutic interventions.</p>
+                
+                <p>Recognizing the growing importance of data-driven science, ICBAT 2024 featured sessions on Biological Data Analysis and Computational Biology. Computational approaches for managing, analyzing, and modeling complex biological datasets were presented as essential tools for modern biological research.</p>
+                
+                <p>Innovations in Biomedical Imaging and Diagnostics were also prominently featured, highlighting advanced imaging modalities, diagnostic technologies, and AI-assisted tools that are enhancing disease detection, monitoring, and clinical decision-making.</p>
+                
+                <p>Beyond scientific and technological advancements, the conference addressed Biotechnology and Society, focusing on the ethical, legal, and social implications of emerging biotechnologies. Discussions emphasized responsible innovation, governance, and public engagement.</p>
+                
+                <p>Finally, sessions on Global Health and Infectious Diseases examined how biotechnology and advanced technologies can address global health challenges, emerging pathogens, and pandemic preparedness, reinforcing the role of interdisciplinary collaboration in safeguarding public health.</p>
+                
+                <p>Overall, ICBAT 2024 provided invaluable opportunities for networking, collaboration, and the exchange of pioneering ideas among global scientists, researchers, and professionals. The conference successfully fostered cross-disciplinary dialogue and contributed to advancing knowledge at the intersection of biology, technology, and society.</p>
+
+                <div class="conference-section">
+                    <h2><i class="fas fa-microphone"></i> Keynote Speakers</h2>
+                    <ul class="speakers-list">
+                        <li>
+                            <div class="speaker-name">Dr. Harishchander Anandaram</div>
+                            <div class="speaker-designation">Assistant Professor (Senior Grade), School of Artificial Intelligence, Coimbatore</div>
+                        </li>
+                        <li>
+                            <div class="speaker-name">Dr. Sathya Sambit</div>
+                            <div class="speaker-designation">Research Technician, RIKEN Center for Brain Science, Japan</div>
+                        </li>
+                        <li>
+                            <div class="speaker-name">Anusha Nerella</div>
+                            <div class="speaker-designation">Senior Software Engineer - Forward-thinking software engineer who has delivered enterprise-grade solutions across government and global financial institutions. She began her career at the U.S. Patent and Trademark Office, contributing to large-scale modernization initiatives. She later held key engineering roles at Citibank and Barclays, driving application modernization and integrating machine learning into legacy platforms. She is currently working with a major global fintech firm, focusing on institutional trading systems, advanced market data infrastructure, and intelligent automation for high-performance financial platforms.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="conference-section">
+                    <h2><i class="fas fa-user-tie"></i> Session Chair</h2>
+                    <ul class="speakers-list">
+                        <li>
+                            <div class="speaker-name">Dr. Harishchander Anandaram</div>
+                            <div class="speaker-designation">Assistant Professor (Senior Grade), School of Artificial Intelligence</div>
+                        </li>
+                        <li>
+                            <div class="speaker-name">Anusha Nerella</div>
+                            <div class="speaker-designation">Senior Software Engineer</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="conference-section">
+                    <h2><i class="fas fa-users"></i> Review Committee Members</h2>
+                    <ul class="committee-list">
+                        <li>
+                            <div class="speaker-name">Dr. Harishchander Anandaram</div>
+                            <div class="speaker-designation">Assistant Professor (Senior Grade), School of Artificial Intelligence</div>
+                        </li>
+                        <li>
+                            <div class="speaker-name">Anusha Nerella</div>
+                            <div class="speaker-designation">Senior Software Engineer</div>
+                        </li>
+                        <li>
+                            <div class="speaker-name">Anurag Sinha</div>
+                            <div class="speaker-designation">ICFAI University</div>
+                        </li>
+                        <li>
+                            <div class="speaker-name">Mohit Tiwari</div>
+                            <div class="speaker-designation">Bharati Vidyapeeth's College of Engineering, Delhi</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="past-conferences.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Past Conferences
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICBAT 2022 - Past Conference</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --text: #333333;
+            --bg-light: #f9f9f9;
+            --card-bg: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+            background-color: var(--bg-light);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: white;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .conference-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+        
+        .conference-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .conference-date {
+            background: var(--accent);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .conference-content {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin: -3rem auto 3rem;
+            max-width: 1000px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .conference-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+        
+        .conference-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #eee;
+        }
+        
+        .conference-section h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .conference-section h2 i {
+            color: var(--secondary);
+        }
+        
+        .speakers-list, .committee-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .speakers-list li, .committee-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .speakers-list li:last-child, .committee-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .speaker-name {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        
+        .speaker-designation {
+            color: var(--text);
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .conference-header h1 {
+                font-size: 2rem;
+            }
+            
+            .conference-content {
+                padding: 2rem;
+                margin: -2rem auto 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo-text">
+                <h1>ICBAT 2022</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="past-conferences.html">Past Conferences</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="conference-header">
+        <div class="container">
+            <h1>ICBAT 2022</h1>
+            <div class="conference-date">3rd and 4th June 2022</div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="conference-content">
+                <p>The International Conference on Biological Sciences, Artificial Intelligence, Machine Learning, and Advanced Technologies (ICBAT 2022) was successfully conducted on 3rd and 4th June 2022, bringing together researchers, academicians, technologists, and industry professionals from diverse disciplines. The conference provided a comprehensive forum for discussing emerging scientific developments and technological innovations influencing the future of biological and computational sciences.</p>
+                
+                <p>ICBAT 2022 functioned as an interdisciplinary convergence platform, emphasizing the integration of biological sciences with artificial intelligence, machine learning, and advanced technological tools. The sessions highlighted how data-driven methodologies, automation, and intelligent systems are redefining research paradigms and accelerating scientific discovery.</p>
+                
+                <p>A significant portion of the conference was devoted to biotechnology and biomedical research, where participants presented advancements in molecular biology, diagnostics, therapeutic development, and translational research. These discussions underscored the expanding role of biotechnology in modern healthcare systems.</p>
+                
+                <p>The conference also addressed genomic sciences, focusing on genome sequencing, functional genomics, and epigenetic mechanisms. Presentations illustrated how genomic technologies are enabling precision medicine, early disease detection, and personalized treatment strategies.</p>
+                
+                <p>Sessions on synthetic biology and bioengineering explored the design and construction of novel biological systems. Researchers demonstrated applications ranging from bio-manufacturing and agricultural innovation to environmental remediation and medical engineering.</p>
+                
+                <p>Environmental sustainability formed another core theme of ICBAT 2022. Deliberations on environmental science and ecological sustainability highlighted biological solutions for climate adaptation, conservation strategies, and sustainable resource management.</p>
+                
+                <p>The role of advanced computational tools in biological research was emphasized throughout the conference. Speakers showcased the application of AI and machine learning algorithms for biological data interpretation, predictive modeling, and systems biology.</p>
+                
+                <p>Breakthrough research in gene editing and genome engineering was discussed, with particular focus on CRISPR-based technologies and their therapeutic potential. Ethical considerations and regulatory perspectives were also examined.</p>
+                
+                <p>The conference featured dedicated sessions on stem cell research and regenerative medicine, highlighting progress in tissue engineering, disease modeling, and regenerative therapies aimed at restoring damaged tissues and organs.</p>
+                
+                <p>Explorations into the human microbiome revealed insights into microbial ecosystems and their influence on health, immunity, and disease. Presentations emphasized emerging microbiome-based diagnostic and therapeutic approaches.</p>
+                
+                <p>ICBAT 2022 also addressed the growing importance of computational biology and biological data analytics, focusing on methods to manage and analyze large, complex biological datasets generated by modern research technologies.</p>
+                
+                <p>Innovations in biomedical imaging and diagnostic technologies were presented, demonstrating advancements in imaging modalities and analytical tools that enhance clinical accuracy and early diagnosis.</p>
+                
+                <p>The conference included discussions on the societal and ethical dimensions of biotechnology, addressing responsible research practices, bioethics, and the implications of technological advancements on society.</p>
+                
+                <p>Global perspectives on public health and infectious diseases were shared, highlighting the role of biotechnology and advanced technologies in disease surveillance, prevention, and response strategies.</p>
+                
+                <p>Overall, ICBAT 2022 served as a valuable knowledge-exchange platform that fostered interdisciplinary collaboration, encouraged innovative thinking, and contributed significantly to advancing research at the interface of biological sciences and advanced technologies.</p>
+
+                <div class="conference-section">
+                    <h2><i class="fas fa-microphone"></i> Keynote Speakers</h2>
+                    <ul class="speakers-list">
+                        <li>
+                            <div class="speaker-name">Dr. Harishchander Anandaram</div>
+                            <div class="speaker-designation">Assistant Professor (Senior Grade), School of Artificial Intelligence, Coimbatore</div>
+                        </li>
+                        <li>
+                            <div class="speaker-name">Anusha Nerella</div>
+                            <div class="speaker-designation">Senior Software Engineer - Forward-thinking software engineer who has delivered enterprise-grade solutions across government and global financial institutions. She began her career at the U.S. Patent and Trademark Office, contributing to large-scale modernization initiatives. She later held key engineering roles at Citibank and Barclays, driving application modernization and integrating machine learning into legacy platforms. She is currently working with a major global fintech firm, focusing on institutional trading systems, advanced market data infrastructure, and intelligent automation for high-performance financial platforms.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="conference-section">
+                    <h2><i class="fas fa-user-tie"></i> Session Chair</h2>
+                    <ul class="speakers-list">
+                        <li>
+                            <div class="speaker-name">Dr. Harishchander Anandaram</div>
+                            <div class="speaker-designation">Assistant Professor (Senior Grade), School of Artificial Intelligence</div>
+                        </li>
+                        <li>
+                            <div class="speaker-name">Anusha Nerella</div>
+                            <div class="speaker-designation">Senior Software Engineer</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="conference-section">
+                    <h2><i class="fas fa-users"></i> Review Committee Members</h2>
+                    <ul class="committee-list">
+                        <li>
+                            <div class="speaker-name">Dr. Harishchander Anandaram</div>
+                            <div class="speaker-designation">Assistant Professor (Senior Grade), School of Artificial Intelligence</div>
+                        </li>
+                        <li>
+                            <div class="speaker-name">Anusha Nerella</div>
+                            <div class="speaker-designation">Senior Software Engineer</div>
+                        </li>
+                        <li>
+                            <div class="speaker-name">Mohit Tiwari</div>
+                            <div class="speaker-designation">Bharati Vidyapeeth's College of Engineering, Delhi</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="past-conferences.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Past Conferences
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+
